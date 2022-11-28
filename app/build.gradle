@@ -1,8 +1,15 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs.kotlin'
 }
-
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+android.buildFeatures.viewBinding true
 android {
     namespace 'com.example.lugares'
     compileSdk 32
@@ -38,7 +45,33 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-auth:21.1.0'
+    implementation platform('com.google.firebase:firebase-bom:28.0.1')
+    //para la autenticacion en firebase
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-storage-ktx'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    /** se comenta por que ya no se va a usar rom database sino la base en la nube
+     *
+     // se agregan estas librerias para usar anotaciones @Entity y demas
+     annotationProcessor'androidx.room:room-compiler:2.4.3'
+     kapt 'androidx.room:room-compiler:2.4.3'
+     implementation 'androidx.room:room-ktx:2.4.3'
+     */
+
+    // para utilizar con navegacion de fragmentos
+    implementation 'androidx.navigation:navigation-dynamic-features-fragment:2.5.3'
+
+    // librerias para el uso mejorado de imagenes
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
 }
