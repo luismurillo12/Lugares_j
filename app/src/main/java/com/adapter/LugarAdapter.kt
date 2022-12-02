@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.lugares.databinding.LugarFilaBinding
 import com.example.lugares.ui.lugar.AddLugarFragmentDirections
+import com.example.lugares.ui.lugar.lugarFragmentDirections
 import com.model.Lugar
 
 class LugarAdapter : RecyclerView.Adapter<LugarAdapter.LugarViewHolder>() {
@@ -24,8 +25,7 @@ class LugarAdapter : RecyclerView.Adapter<LugarAdapter.LugarViewHolder>() {
                 .into(itemBinding.imagen)
             //Creo una accion para navegar a updateLugar pasando un argumento lugar
             itemBinding.vistaFila.setOnClickListener {
-                val action = Lugar
-                    .actionNavLugarToUpdateLugarFragment(lugar)
+                val action = lugarFragmentDirections.actionNavLugarToUpdateLugarFragment(lugar)
 
                 //Efectivamente se pasa al fragmento
                 itemView.findNavController().navigate(action)

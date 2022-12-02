@@ -10,7 +10,8 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.activity.result.ActivityResultLauncher
 import androidx.core.content.FileProvider
-import com.lugares_j.BuildConfig
+import com.google.firebase.components.BuildConfig
+
 import java.io.File
 
 class ImagenUtiles (

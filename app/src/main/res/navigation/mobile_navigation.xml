@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_lugar"
         android:name="com.example.lugares.ui.lugar.lugarFragment"
-        android:label="@string/menu_home"
+        android:label="@string/menu_lugar"
         tools:layout="@layout/fragment_lugar" >
         <action
             android:id="@+id/action_nav_lugar_to_addLugarFragment"

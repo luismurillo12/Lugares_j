@@ -56,6 +56,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
     implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.google.android.gms:play-services-auth:20.4.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
@@ -72,6 +73,9 @@ dependencies {
     implementation 'androidx.navigation:navigation-dynamic-features-fragment:2.5.3'
 
     // librerias para el uso mejorado de imagenes
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    //Librerias para el uso mejorado de imágenes
     implementation 'com.github.bumptech.glide:glide:4.13.0'
     implementation 'jp.wasabeef:glide-transformations:4.3.0'
 }

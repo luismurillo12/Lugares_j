@@ -1,5 +1,6 @@
 package com.example.lugares.ui.lugar
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -162,6 +163,8 @@ class UpdateLugarFragment : Fragment() {
         }
     }
 
+
+    @SuppressLint("SuspiciousIndentation")
     private fun verEnMapa() {
     val latitud = binding.tvLatitud.text.toString().toDouble()
     val longitud = binding.tvLongitud.text.toString().toDouble()

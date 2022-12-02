@@ -57,4 +57,10 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_login" />
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/bt_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 </LinearLayout>

@@ -132,7 +132,7 @@ class AddLugarFragment : Fragment() {
             val rutaLocal = Uri.fromFile(archivoLocal)
             // se establece la rutra de audio en la nube
             val rutaNube =
-                "lugaresApp/${Firebase.auth.currentUser?.email}/imagenes/${archivoLocal.name}"
+                "lugares/${Firebase.auth.currentUser?.email}/imagenes/${archivoLocal.name}"
             //se hace la referencia real  debido a que lo anterior es solo un string
             val referecia: StorageReference = Firebase.storage.reference.child(rutaNube)
             // se sube el archivo yu se establece el Listen para saber que hacer
